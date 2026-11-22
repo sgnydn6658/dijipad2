@@ -9193,6 +9193,9 @@ window.addEventListener('drop',e=>{dragN=0;hint().classList.remove('on');const f
  .layout>main{height:100%!important;min-height:0!important}
  #stage{min-height:0!important}
  #toolSettings{max-width:calc(100vw - 16px)!important;box-sizing:border-box}
+ /* Menü: tarayıcı çubuklarının arkasına taşmasın; kartların üstünden dikey kaydırma menüyü kaydırsın, yana çekme aracı tahtaya sürüklesin */
+ #menu{max-height:calc(100vh - 120px)!important;max-height:calc(100dvh - 120px)!important;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+ #menu .nt-src,#menu .bar-source,#menu .kc-source,#menu .sc-src{touch-action:pan-y!important}
 }
 @media (max-width:760px){
  header .brand-sidebar h1{display:none!important}
