@@ -9183,6 +9183,8 @@ window.addEventListener('drop',e=>{dragN=0;hint().classList.remove('on');const f
 </script>
 
 <style id="dpmob-css">
+/* Menü kartları (tüm ekranlar, akıllı tahta dahil): kartın üstünden yukarı/aşağı kaydırma menüyü kaydırır; dokunma aracı ekler; yana çekme aracı tahtaya sürükler */
+#menu .nt-src,#menu .bar-source,#menu .kc-source,#menu .sc-src{touch-action:pan-y!important}
 /* ===== Dijipad mobil/tablet uyumu — YALNIZCA 1280 pikselden dar ekranlarda etkin (akıllı tahtada devre dışı) ===== */
 @media (max-width:1279px){
  header{flex-wrap:nowrap!important;height:56px!important;min-height:56px!important;max-height:56px!important;padding-bottom:0!important;overflow-x:auto!important;overflow-y:hidden!important;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;justify-content:flex-start!important}
@@ -9195,7 +9197,6 @@ window.addEventListener('drop',e=>{dragN=0;hint().classList.remove('on');const f
  #toolSettings{max-width:calc(100vw - 16px)!important;box-sizing:border-box}
  /* Menü: tarayıcı çubuklarının arkasına taşmasın; kartların üstünden dikey kaydırma menüyü kaydırsın, yana çekme aracı tahtaya sürüklesin */
  #menu{max-height:calc(100vh - 120px)!important;max-height:calc(100dvh - 120px)!important;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
- #menu .nt-src,#menu .bar-source,#menu .kc-source,#menu .sc-src{touch-action:pan-y!important}
 }
 @media (max-width:760px){
  header .brand-sidebar h1{display:none!important}
